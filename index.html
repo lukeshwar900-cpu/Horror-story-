@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>डर की दुनिया | हॉरर वीडियो और कहानियाँ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" onclick="showPage('homepage');">डर की दुनिया</a>
+            <ul>
+                <li><a href="#videos">वीडियो</a></li>
+                <li><a href="#stories">कहानियाँ</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <h1>डर की दुनिया</h1>
+            <p>खोजें और देखें सबसे डरावने वीडियो और कहानियाँ</p>
+        </div>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="हॉरर वीडियो या कहानी खोजें...">
+            <button id="searchButton">खोजें</button>
+        </div>
+    </header>
+    
+    <main id="homepage">
+        <section id="videos">
+            <h2>डरावने वीडियो</h2>
+            <div id="video-list">
+                <p id="loading-text">वीडियो लोड हो रहे हैं...</p>
+            </div>
+            <button id="loadMoreButton" style="display: none;">और लोड करें</button>
+        </section>
+
+        <section id="stories">
+            <h2>हॉरर कहानियाँ</h2>
+            <article class="story">
+                <h3>जंगल का भूत</h3>
+                <p>एक बार कुछ दोस्त जंगल में गए और उन्होंने रात को...</p>
+                <a href="#" onclick="showPage('story1');">पूरी कहानी पढ़ें</a>
+            </article>
+            <article class="story">
+                <h3>पुरानी हवेली का रहस्य</h3>
+                <p>शहर से दूर एक पुरानी हवेली में अजीब सी...</p>
+                <a href="#" onclick="showPage('story2');">पूरी कहानी पढ़ें</a>
+            </article>
+            <article class="story">
+                <h3>पहाड़ी का साया</h3>
+                <p>एक पुरानी पहाड़ी पर एक साया था जो रात को...</p>
+                <a href="#" onclick="showPage('story3');">पूरी कहानी पढ़ें</a>
+            </article>
+        </section>
+    </main>
+
+    <main id="story1" class="hidden">
+        <header>
+            <nav>
+                <a href="#" onclick="showPage('homepage');">वापस जाएँ</a>
+            </nav>
+        </header>
+        <article class="full-story">
+            <h2>जंगल का भूत</h2>
+            <p>एक बार कुछ दोस्त जंगल में घूमने गए। शाम होते-होते उन्हें रास्ता भटकने का एहसास हुआ। चारों तरफ घना अंधेरा था और अजीब सी आवाजें आ रही थीं। तभी उन्हें दूर एक झोपड़ी दिखाई दी। झोपड़ी के पास पहुँचकर उन्होंने देखा कि वहाँ कोई नहीं था। जैसे ही वे झोपड़ी में घुसे, दरवाज़ा अपने आप बंद हो गया और एक अजीब सी छाया दीवार पर हिलने लगी। वे डर गए और भागने की कोशिश करने लगे, लेकिन दरवाज़ा नहीं खुला। तभी एक भयानक आवाज़ आई... "तुम अब यहाँ से कहीं नहीं जा सकते।"</p>
+        </article>
+    </main>
+
+    <main id="story2" class="hidden">
+        <header>
+            <nav>
+                <a href="#" onclick="showPage('homepage');">वापस जाएँ</a>
+            </nav>
+        </header>
+        <article class="full-story">
+            <h2>पुरानी हवेली का रहस्य</h2>
+            <p>शहर से दूर एक पुरानी हवेली में अजीब सी घटनाएँ होती थीं। लोग कहते थे कि उस हवेली में एक लड़की की आत्मा रहती है। एक रात, कुछ लड़के-लड़कियाँ हिम्मत करके उस हवेली में गए। जैसे ही वे अंदर घुसे, उन्हें एक पुरानी लड़की की तस्वीर दिखी। तभी हवा में एक गाना गूंजने लगा, लेकिन वहाँ कोई रेडियो या म्यूज़िक प्लेयर नहीं था। वे घबरा गए। उन्होंने देखा कि तस्वीर में से लड़की मुस्कुरा रही थी और उसकी आँखें घूम रही थीं। तभी हवेली के सारे दरवाजे बंद हो गए और वहाँ का तापमान अचानक बहुत कम हो गया। सब डर के मारे चिल्लाने लगे...</p>
+        </article>
+    </main>
+    
+    <main id="story3" class="hidden">
+        <header>
+            <nav>
+                <a href="#" onclick="showPage('homepage');">वापस जाएँ</a>
+            </nav>
+        </header>
+        <article class="full-story">
+            <h2>पहाड़ी का साया</h2>
+            <p>एक पुरानी पहाड़ी पर एक साया था जो रात को दिखाई देता था। गाँव वाले उस पहाड़ी पर जाने से डरते थे। एक बार एक यात्री गलती से उस पहाड़ी पर चढ़ गया। रात हो चुकी थी और उसने देखा कि एक लंबा साया उसके पीछे चल रहा था। जैसे ही वह रुका, साया भी रुक गया। जब वह तेज़ चलने लगा, तो साया भी तेज़ चलने लगा। यात्री ने डर के मारे भागना शुरू कर दिया। साया भी तेज़ी से उसके पीछे भागा और यात्री को एक चट्टान के पास धकेल दिया। जैसे ही वह नीचे गिरने वाला था, उसने देखा कि वह साया नहीं बल्कि एक पेड़ की परछाई थी। लेकिन जब उसने पीछे मुड़कर देखा, तो वह साया वापस आ चुका था और उसके सामने खड़ा था।</p>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 डर की दुनिया। सभी अधिकार सुरक्षित।</p>
+    </footer>
+    
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <iframe id="videoPlayer" width="100%" height="400" src="" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --dark-bg: #0a0a0a;
+    --dark-surface: #1a1a1a;
+    --horror-red: #d32f2f;
+    --text-color: #f0f0f0;
+    --secondary-color: #b0b0b0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: var(--dark-surface);
+    border-bottom: 3px solid var(--horror-red);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #222;
+    border-bottom: 2px solid var(--horror-red);
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: 'Creepster', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: var(--horror-red);
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+.header-content {
+    padding: 2rem 1rem;
+}
+
+h1, h2 {
+    font-family: 'Creepster', cursive;
+    color: var(--horror-red);
+    letter-spacing: 2px;
+    margin: 0.5rem 0;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    color: var(--secondary-color);
+}
+
+main {
+    padding: 3rem 1rem;
+}
+
+.search-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#searchInput {
+    padding: 12px;
+    width: 60%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid var(--horror-red);
+    background-color: #2a2a2a;
+    color: var(--text-color);
+}
+
+#searchInput::placeholder {
+    color: var(--secondary-color);
+}
+
+#searchButton {
+    padding: 12px 24px;
+    border-radius: 5px;
+    background-color: var(--horror-red);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#searchButton:hover {
+    background-color: #a00;
+}
+
+#video-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.video-item {
+    cursor: pointer;
+    background-color: var(--dark-surface);
+    border: 1px solid #333;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.video-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.video-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid var(--horror-red);
+}
+
+.video-item h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.story {
+    background-color: var(--dark-surface);
+    padding: 2rem;
+    margin: 30px auto;
+    max-width: 700px;
+    border-left: 5px solid var(--horror-red);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.story h3 {
+    font-family: 'Creepster', cursive;
+    font-size: 2rem;
+    color: var(--horror-red);
+    text-align: center;
+}
+
+.story p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.story a {
+    color: var(--horror-red);
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+}
+
+#loadMoreButton {
+    padding: 12px 24px;
+    margin-top: 40px;
+    background-color: var(--horror-red);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#loadMoreButton:hover {
+    background-color: #a00;
+}
+
+footer {
+    background-color: var(--dark-surface);
+    padding: 1.5rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid #333;
+}
+
+/* मोडल का CSS */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+    padding-top: 60px;
+}
+
+.modal-content {
+    margin: auto;
+    width: 90%;
+    max-width: 900px;
+}
+
+.close-button {
+    color: var(--horror-red);
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 11;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* कहानियों के लिए नया CSS */
+.hidden {
+    display: none;
+}
+
+.full-story {
+    background-color: var(--dark-surface);
+    padding: 2rem;
+    margin: 30px auto;
+    max-width: 800px;
+    border-left: 5px solid var(--horror-red);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: left;
+}
+
+.full-story h2 {
+    text-align: center;
+}
+
+.full-story p {
+    line-height: 1.8;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+}
