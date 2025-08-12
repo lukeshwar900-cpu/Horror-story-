@@ -1,5 +1,5 @@
 // यह आपकी API Key है जो आपके Google Cloud Console से मिली है।
-const API_KEY = "AIzaSyCEyTs3Uerqo4av8KZGPTUCWfx_T5Er0vI";
+const API_KEY = "AIzaSyAchRxcFPKXkuPpnRWbRzvgeTASc1hzKcw";
 
 // यह आपके YouTube चैनल का ID है।
 const CHANNEL_ID = "UCeLzE4Wj1u9fK9kP5jK2hQw";
